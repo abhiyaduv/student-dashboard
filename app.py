@@ -9,7 +9,7 @@ from openpyxl import Workbook
 from flask import send_file
 app = Flask(__name__)
 app.secret_key = "secret123"
-
+create_table()
 DB_NAME = "database.db"
 UPLOAD_FOLDER = "uploads"
 
@@ -240,4 +240,5 @@ def download_excel():
 # ================= MAIN =================
 if __name__ == "__main__":
     create_table()
+
     app.run(host="0.0.0.0", port=5000)
